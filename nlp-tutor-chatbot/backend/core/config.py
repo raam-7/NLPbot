@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     APP_DESCRIPTION: str
 
     DEBUG: bool
+    SQL_ECHO: bool
 
     HOST: str
     PORT: int
