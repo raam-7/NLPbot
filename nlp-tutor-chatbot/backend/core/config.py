@@ -1,3 +1,4 @@
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -46,6 +47,17 @@ class Settings(BaseSettings):
         env_file=".env",
         case_sensitive=True
     )
+
+    @field_validator("DEBUG", "SQL_ECHO", mode="before")
+    @classmethod
+    def parse_bool_like_values(cls, value):
+        if isinstance(value, str):
+            normalized = value.strip().lower()
+            if normalized in {"release", "production", "prod", "false", "0", "off", "no"}:
+                return False
+            if normalized in {"debug", "development", "dev", "true", "1", "on", "yes"}:
+                return True
+        return value
 
 
 settings = Settings()
