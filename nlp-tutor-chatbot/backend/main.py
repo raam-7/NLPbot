@@ -1,12 +1,25 @@
 from fastapi import FastAPI
 
-from api.routes.health import router as health_router
-from core.config import settings
+from api.routes.auth import router as auth_router
 
 app = FastAPI(
-    title=settings.APP_NAME,
-    description=settings.APP_DESCRIPTION,
-    version=settings.APP_VERSION,
+    title="AI-Powered NLP Tutor Chatbot",
+    version="1.0.0",
 )
 
-app.include_router(health_router)
+app.include_router(auth_router)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "Welcome to the NLP Tutor Chatbot API!"
+    }
+
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "service": "NLP Tutor Chatbot Backend",
+    }
