@@ -3,6 +3,11 @@ from sqlalchemy.orm import sessionmaker
 
 from core.config import settings
 
+# Import models so SQLAlchemy registers relationships before first query.
+from models.conversation import Conversation
+from models.message import Message
+from models.user import User
+
 # Create the SQLAlchemy engine
 engine = create_engine(
     settings.DATABASE_URL,

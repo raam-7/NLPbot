@@ -7,6 +7,8 @@ from core.config import settings
 from database.base import Base
 
 # Import all models so Alembic can detect them during autogenerate.
+from models.conversation import Conversation
+from models.message import Message
 from models.user import User
 
 # this is the Alembic Config object, which provides
