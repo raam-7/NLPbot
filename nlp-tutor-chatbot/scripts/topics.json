@@ -1,0 +1,70 @@
+{
+  "basics": [
+    "Introduction",
+    "History",
+    "Applications",
+    "NLP Pipeline"
+  ],
+  "preprocessing": [
+    "Text Cleaning",
+    "Tokenization",
+    "Sentence Segmentation",
+    "Stop Words",
+    "Stemming",
+    "Lemmatization",
+    "Regular Expressions"
+  ],
+  "syntax": [
+    "Part of Speech Tagging",
+    "Chunking",
+    "Parsing",
+    "Dependency Parsing",
+    "Named Entity Recognition"
+  ],
+  "embeddings": [
+    "Bag of Words",
+    "Term Frequency",
+    "Inverse Document Frequency",
+    "TF-IDF",
+    "N-Grams",
+    "Word Embeddings",
+    "Word2Vec",
+    "GloVe",
+    "FastText"
+  ],
+  "transformers": [
+    "Transformer",
+    "Self Attention",
+    "Multi Head Attention",
+    "Encoder",
+    "Decoder",
+    "BERT",
+    "GPT",
+    "Prompt Engineering"
+  ],
+  "applications": [
+    "Sentiment Analysis",
+    "Text Classification",
+    "Topic Modeling",
+    "Machine Translation",
+    "Question Answering",
+    "Chatbots",
+    "Information Retrieval"
+  ],
+  "evaluation": [
+    "Accuracy",
+    "Precision",
+    "Recall",
+    "F1 Score",
+    "Confusion Matrix",
+    "BLEU",
+    "ROUGE"
+  ],
+  "llms": [
+    "Embeddings",
+    "FAISS",
+    "Vector Database",
+    "Retrieval Augmented Generation",
+    "Recent LLM Concepts"
+  ]
+}
