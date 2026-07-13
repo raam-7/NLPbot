@@ -14,22 +14,44 @@ from rag.loader import DocumentLoader
 from rag.splitter import DocumentSplitter
 from rag.embedder import EmbeddingGenerator
 
-
 class VectorIndexer:
     """
     Builds and saves the FAISS vector index.
     """
 
-    def __init__(self):
+    def __init__(self, kb_type: str):
+
+        self.kb_type = kb_type
+
         project_root = Path(__file__).resolve().parent.parent.parent
 
-        self.knowledge_base = project_root / "knowledge-base"
-        self.vector_db = project_root / "vector-db"
+        self.knowledge_base = (
+            project_root
+            / "knowledge-base"
+            / kb_type
+        )
 
-        self.vector_db.mkdir(exist_ok=True)
+        if not self.knowledge_base.exists():
+         raise FileNotFoundError(
+        f"Knowledge base '{kb_type}' not found at:\n{self.knowledge_base}"
+    )
+
+        self.vector_db = (
+            project_root
+            / "backend"
+            / "vector-db"
+            / kb_type
+        )
+
+        self.vector_db.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
 
         self.loader = DocumentLoader(self.knowledge_base)
+
         self.splitter = DocumentSplitter()
+
         self.embedder = EmbeddingGenerator()
 
     def build(self):
@@ -85,5 +107,15 @@ class VectorIndexer:
 
 
 if __name__ == "__main__":
-    indexer = VectorIndexer()
-    indexer.build()
+
+    kb_type = input(
+    "Build which knowledge base (theory/practical): "
+).strip().lower()
+
+if kb_type not in ["theory", "practical"]:
+    print("❌ Invalid knowledge base.")
+    print("Choose either 'theory' or 'practical'.")
+    exit()
+
+indexer = VectorIndexer(kb_type)
+indexer.build()
