@@ -1,6 +1,10 @@
+from agents.theory_agent import TheoryAgent
+from agents.practical_agent import PracticalAgent
+
+
 class RouterAgent:
     """
-    Decides which agent should handle the user's question.
+    Routes the user's question to the correct AI agent.
     """
 
     PRACTICAL_KEYWORDS = {
@@ -21,16 +25,22 @@ class RouterAgent:
         "api",
     }
 
+    def __init__(self):
+        # Create one instance of each agent
+        self.theory_agent = TheoryAgent()
+        self.practical_agent = PracticalAgent()
+
     def route(self, question: str) -> str:
 
-        question = question.lower()
+        question_lower = question.lower()
 
         for keyword in self.PRACTICAL_KEYWORDS:
+            if keyword in question_lower:
+                print("\n📌 Routing to Practical Agent...\n")
+                return self.practical_agent.handle(question)
 
-            if keyword in question:
-                return "practical"
-
-        return "theory"
+        print("\n📘 Routing to Theory Agent...\n")
+        return self.theory_agent.handle(question)
 
 
 if __name__ == "__main__":
@@ -39,8 +49,13 @@ if __name__ == "__main__":
 
     while True:
 
-        question = input("\nAsk a question: ")
+        question = input("\nAsk a question (type 'exit' to quit): ")
 
-        agent = router.route(question)
+        if question.lower() in ["exit", "quit"]:
+            break
 
-        print(f"\nSelected Agent: {agent}")
+        answer = router.route(question)
+
+        print("\n" + "=" * 80)
+        print(answer)
+        print("=" * 80)

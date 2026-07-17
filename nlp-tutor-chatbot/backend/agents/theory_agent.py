@@ -1,48 +1,35 @@
 from agents.base_agent import BaseAgent
 from rag.retriever import Retriever
+from rag.prompt_builder import PromptBuilder
+from services.llm.ollama_service import OllamaService
 
 
 class TheoryAgent(BaseAgent):
     """
-    Handles theoretical NLP questions.
+    Handles theoretical NLP questions using RAG.
     """
 
     def __init__(self):
         print("✅ Theory Agent Initialized")
 
         self.retriever = Retriever("theory")
+        self.llm = OllamaService()
 
     def handle(self, question: str) -> str:
-        """
-        Retrieve relevant theory chunks.
-        """
 
-        results = self.retriever.search(question)
+        # Retrieve relevant chunks
+        chunks = self.retriever.search(question)
 
-        if not results:
-            return "No relevant information found."
+        if not chunks:
+            return "I don't have enough information in my knowledge base."
 
-        response = []
+        # Build prompt
+        prompt = PromptBuilder.build(question, chunks)
 
-        response.append("=" * 60)
-        response.append("Retrieved Theory Chunks")
-        response.append("=" * 60)
+        # Generate answer using Qwen
+        answer = self.llm.generate(prompt)
 
-        for i, result in enumerate(results, start=1):
-
-            response.append(f"\nChunk {i}")
-
-            response.append(f"Title : {result['title']}")
-
-            response.append(f"Source : {result['source']}")
-
-            response.append(f"Distance : {result['score']:.4f}")
-
-            response.append(result["text"][:300])
-
-            response.append("-" * 60)
-
-        return "\n".join(response)
+        return answer
 
 
 if __name__ == "__main__":
@@ -53,8 +40,11 @@ if __name__ == "__main__":
 
         question = input("\nAsk a theory question: ")
 
+        if question.lower() in ["exit", "quit"]:
+            break
+
         answer = agent.handle(question)
 
-        print("\n")
-
+        print("\n" + "=" * 70)
         print(answer)
+        print("=" * 70)
