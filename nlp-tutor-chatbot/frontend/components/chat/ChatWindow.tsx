@@ -1,21 +1,30 @@
+"use client";
+
 import ChatInput from "./ChatInput";
-import Message from "./Message";
+import MessageList from "./MessageList";
+import WelcomeScreen from "./WelcomeScreen";
+import TypingIndicator from "./TypingIndicator";
+
+import { useChat } from "@/hooks/useChat";
 
 export default function ChatWindow() {
-  return (
-    <section className="flex flex-1 flex-col">
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-8">
-        <div className="mx-auto max-w-4xl space-y-6">
-          <Message
-            role="assistant"
-            content="👋 Hello! I'm your AI NLP Tutor. Ask me anything about Natural Language Processing."
-          />
-        </div>
-      </div>
+  const { messages, loading, send } = useChat();
 
-      {/* Input */}
-      <ChatInput />
+  return (
+    <section className="flex flex-1 flex-col bg-zinc-950">
+      {messages.length === 0 ? (
+        <WelcomeScreen />
+      ) : (
+        <>
+          <MessageList messages={messages} />
+          {loading && <TypingIndicator />}
+        </>
+      )}
+
+      <ChatInput
+        onSend={send}
+        loading={loading}
+      />
     </section>
   );
 }

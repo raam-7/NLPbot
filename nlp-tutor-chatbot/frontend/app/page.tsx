@@ -1,11 +1,5 @@
-import Sidebar from "@/components/sidebar/Sidebar";
-import ChatWindow from "@/components/chat/ChatWindow";
+import AppLayout from "@/components/layout/AppLayout";
 
-export default function HomePage() {
-  return (
-    <main className="flex h-screen">
-      <Sidebar />
-      <ChatWindow />
-    </main>
-  );
+export default function Home() {
+  return <AppLayout />;
 }
