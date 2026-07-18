@@ -1,27 +1,30 @@
-from ollama import chat
+from services.llm.base import BaseLLM
+
+try:
+    from ollama import chat
+except ImportError:  # pragma: no cover - depends on optional local install
+    chat = None
 
 
-class OllamaService:
-    """
-    Handles communication with the local Ollama server.
-    """
-
-    def __init__(self, model: str = "qwen3:4b"):
+class OllamaService(BaseLLM):
+    def __init__(self, model="qwen3:4b"):
         self.model = model
 
     def generate(self, prompt: str) -> str:
-        """
-        Send a prompt to Ollama and return the model's response.
-        """
+        if chat is None:
+            raise RuntimeError(
+                "The optional 'ollama' package is not installed. "
+                "Install it with 'pip install ollama' to use OllamaService."
+            )
 
         response = chat(
             model=self.model,
             messages=[
                 {
                     "role": "user",
-                    "content": prompt
+                    "content": prompt,
                 }
-            ]
+            ],
         )
 
         return response["message"]["content"]

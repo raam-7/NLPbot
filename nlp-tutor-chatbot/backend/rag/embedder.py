@@ -34,10 +34,7 @@ class EmbeddingGenerator:
                 if model_path.exists():
                     self.model = SentenceTransformer(str(model_path))
                 else:
-                    self.model = SentenceTransformer(
-                        model_name,
-                        local_files_only=True,
-                    )
+                   self.model = SentenceTransformer(model_name)
 
                 print("Model loaded successfully.")
                 return

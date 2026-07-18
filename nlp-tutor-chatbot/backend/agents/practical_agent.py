@@ -1,7 +1,7 @@
 from agents.base_agent import BaseAgent
 from rag.retriever import Retriever
 from rag.prompt_builder import PromptBuilder
-from services.llm.ollama_service import OllamaService
+from services.llm.factory import LLMFactory
 
 
 class PracticalAgent(BaseAgent):
@@ -13,7 +13,7 @@ class PracticalAgent(BaseAgent):
         print("✅ Practical Agent Initialized")
 
         self.retriever = Retriever("practical")
-        self.llm = OllamaService()
+        self.llm = LLMFactory.create()
 
     def handle(self, question: str) -> str:
 
