@@ -1,0 +1,504 @@
+
+
+===== PAGE 1 =====
+
+Natural Language Processing
+(TEE7101 / 0701260505)
+Theory | Credits: 3 | No. of Hours: 45 | Lectures/Week: 3
+Internal: 30M | External (ESE): 45M
+SIT Pune | AIML | B.Tech 2024-28 | Semester V
+
+===== PAGE 2 =====
+
+Evaluation Plan
+Assessment is linked with course outcomes
+Natural Language Processing | First Class
+CA1 Quiz
+Unit 1: Introduction to Language
+10 marks scaled to 4
+Tentative: 03/08/2026
+CA2 Unit Test
+CO2 and CO3
+Unit 2: Feature Extraction
+Unit 3: Word Embeddings
+20 marks scaled to 15
+Tentative: 07/09/2026 to
+12/09/2026
+CA3 Case Studies
+CO4 and CO5
+Advanced NLP models
+Machine translation
+12 marks
+Tentative: 22/10/2026
+Tip: build a small NLP example portfolio while learning. It makes CA3 easier.
+
+===== PAGE 3 =====
+
+Why NLP Now?
+Language is the main interface to modern AI
+You already use NLP when you...
+search with natural questions
+translate messages instantly
+dictate to your phone
+get auto-captions in videos
+ChatGPT, Gemini, Copilot, or chatbots
+Industry uses NLP for...
+customer-support automation
+resume and document screening
+medical and legal document analysis
+sentiment and social media analytics
+knowledge assistants over company data
+If a machine answers in fluent English, does it really understand language?
+Natural Language Processing | First Class
+
+===== PAGE 4 =====
+
+What Is NLP?
+Natural Language Processing helps machines work with human language
+NLP is the AI area that allows computers to read, write, listen, speak, translate,
+search, summarize, and answer using natural language.
+Examples
+Google Search understanding a question
+YouTube auto captions
+WhatsApp predictive text
+Google Translate
+ChatGPT / Gemini / Copilot
+Key challenge
+Human language is ambiguous
+Meaning depends on context
+Same word can mean different things
+Tone, sarcasm, and culture matter
+Natural Language Processing | First Class
+
+===== PAGE 5 =====
+
+Course Map
+From basic language processing to modern language AI systems
+Unit I
+Language basics and NLP
+pipeline
+clean text, tokenize, POS, NER
+Unit II
+Feature extraction
+BoW, TF-IDF, N-grams, Naive Bayes
+Unit III Word embeddings
+Word2Vec, GloVe, semantic similarity
+Unit IV RNNs and sequence models
+language models, LSTM, GRU
+Unit V
+Machine translation and
+modern NLP
+Seq2Seq, BERT, GPT, conversational AI
+Natural Language Processing | First Class
+
+===== PAGE 6 =====
+
+Syllabus
+Units I and II: from language basics to features
+Natural Language Processing | First Class
+Unit I: Introduction to Language
+Evolution of natural language
+Introduction and need of NLP
+Applications: discourse, dialog, opinion mining
+NLP phases and pipeline
+Preprocessing, tokenization, stemming, POS,
+normalization, NER
+Unit II: Feature Extraction
+One-hot encoding
+Bag of Words, skip-grams, CountVectorizer
+TF-IDF
+Probabilistic language modeling
+Naive Bayes, Markov models, N-grams,
+smoothing
+
+===== PAGE 7 =====
+
+Syllabus
+Units III to V: from embeddings to modern language systems
+Natural Language Processing | First Class
+Unit III: Word Embeddings
+Word2Vec and GloVe
+Gensim examples
+Word senses and word windows
+Neural networks basics
+Dependency parsing; negative
+sampling
+Unit IV: RNNs
+Recurrent Neural Networks
+Language models
+N-gram connection
+Vanishing gradients
+LSTM and GRU
+Unit V: Machine Translation
+Seq2Seq machine translation
+BERT, LaMDA, GPT
+Conversational AI
+Recent NLP papers
+Responsible language AI
+
+===== PAGE 8 =====
+
+Unit I Real-World Examples
+Introduction to Language and NLP pipeline
+YouTube captions: speech becomes text, punctuation is restored, names are recognized.
+WhatsApp autocorrect: tokenization, normalization, and context-based suggestions.
+Swiggy/Zomato review mining: opinion words reveal customer satisfaction.
+Bank KYC forms: named entity recognition finds names, dates, addresses, and IDs.
+Customer-support bots: intent detection decides whether a user wants refund, tracking, or complaint
+help.
+Natural Language Processing | First Class
+
+===== PAGE 9 =====
+
+Unit II Real-World Examples
+Feature extraction: turning text into numbers
+Spam filtering: words such as 'winner', 'urgent', and suspicious links become useful features.
+News categorization: TF-IDF highlights words that separate politics, sports, finance, and technology.
+Search engines: query terms are matched with documents using weighted word statistics.
+Helpdesk routing: complaint text is converted into features and sent to the correct department.
+Sentiment dashboards: product reviews are converted into measurable signals.
+Natural Language Processing | First Class
+
+===== PAGE 10 =====
+
+Unit III Real-World Examples
+Embeddings: meaning as vectors
+Semantic search: 'laptop battery issue' can match 'notebook power problem'.
+Resume-job matching: similar skills are recognized even when wording is different.
+Recommendation systems: similar product descriptions are grouped together.
+Duplicate question detection: two differently worded questions can have the same meaning.
+Chatbot retrieval: embeddings help find the closest answer from a knowledge base.
+Natural Language Processing | First Class
+
+===== PAGE 11 =====
+
+Unit IV Real-World Examples
+RNNs and sequence modeling
+Keyboard prediction: the next word depends on previous words in the sentence.
+Speech recognition: audio is processed as a sequence over time.
+Chatbot response flow: earlier conversation context affects the next reply.
+Medical notes: symptoms mentioned across a paragraph must be connected.
+Older translation systems: LSTM and GRU models handled word order before transformers dominated.
+Natural Language Processing | First Class
+
+===== PAGE 12 =====
+
+Unit V Real-World Examples
+Machine translation and modern NLP systems
+Google Translate and Microsoft Translator: cross-language communication at scale.
+Live captions and dubbing: speech, translation, and generation work together.
+Conversational AI: assistants answer, summarize, plan, and call tools.
+Document intelligence: legal, medical, and academic documents are summarized and queried.
+Research reading assistants: papers can be searched, summarized, compared, and explained.
+Natural Language Processing | First Class
+
+===== PAGE 13 =====
+
+Course Outcomes
+What you should be able to do by the end
+Explain evolution, need, applications, and phases of NLP.
+Apply feature extraction methods such as BoW, TF-IDF, N-grams, and probabilistic models.
+Use and compare word embeddings and neural representations.
+Analyze RNN/LSTM/GRU and advanced NLP models for language tasks.
+Understand machine translation and discuss current NLP research systems.
+Natural Language Processing | First Class
+
+===== PAGE 14 =====
+
+Evaluation Plan
+Assessment is linked with course outcomes
+Natural Language Processing | First Class
+CA1 Quiz
+Unit 1: Introduction to Language
+10 marks scaled to 3/4
+Tentative: 03/08/2026
+CA2 Unit Test
+CO2 and CO3
+Unit 2: Feature Extraction
+Unit 3: Word Embeddings
+20 marks scaled to 14/15
+Tentative: 07/09/2026 to
+12/09/2026
+CA3 Case Studies
+CO4 and CO5
+Advanced NLP models
+Machine translation
+12 marks
+Tentative: 22/10/2026
+Build a small NLP Repo of Examples while learning. It makes CA3 easier.
+
+===== PAGE 15 =====
+
+Who Am I?
+A short introduction before we begin
+Dr. Sucheta Kolekar
+Teaching and research experience: 19+ years
+Research areas: AI/ML in HealthTech and EdTech,
+HCI, Cloud Computing
+Course faculty: Dr. Sucheta and Prof. Mayur
+Contact: sucheta.kolekar@sitpune.edu.in | 9008773043
+Class style
+Examples first, theory next
+Ask why the model made a mistake
+Connect every unit to a real app or
+system
+Natural Language Processing | First Class
+
+===== PAGE 16 =====
+
+
+
+===== PAGE 17 =====
+
+Platform
+Best For
+Free
+Hugging Face
+Pre-trained NLP models, inference, fine-tuning
+Google Colab
+Running Python notebooks without installation
+Kaggle Notebooks
+NLP datasets, competitions, notebooks
+spaCy
+Industrial NLP pipeline
+NLTK
+Learning NLP concepts from scratch
+OpenAI Playground
+Prompt engineering and LLM experiments
+Limited free
+Cohere Playground
+Text generation, embeddings
+Limited free
+IBM Watsonx.ai
+Enterprise NLP and GenAI
+Free tier
+Google AI Studio
+Gemini models and prompt engineering
+Free tier
+Azure AI Foundry
+Enterprise NLP and LLM deployment
+Free credits
+Amazon SageMaker Studio Lab
+ML and NLP experimentation
+Papers with Code
+Latest NLP research with implementations
+TensorFlow Hub
+NLP models and embeddings
+PyTorch Hub
+Deep learning NLP models
+Gradio
+Build NLP web applications
+Streamlit
+Deploy NLP demos quickly
+
+===== PAGE 18 =====
+
+NLP Pipeline
+A simple mental model for the whole subject
+Natural Language Processing | First Class
+Raw text → Cleaning → Tokens → Features / embeddings → Model → Output →
+Evaluation/Validation
+Example
+Review: "The phone battery is amazing."
+Output: Positive sentiment
+Same pipeline idea powers search, chatbots, translation, and summarization.
+Modern systems add retrieval, tools, multimodal inputs, and safety checks.
+Text
+Representation
+Model
+Output
+Evaluation
+cleaning, tokens
+features, embeddings
+ML, RNN, transformer
+class, answer, translation
+accuracy, safety, trust
+Do not memorize only algorithms; ask what language problem each algorithm solves.
+Compare old methods and new methods: rules, statistics, embeddings, transformers, LLMs.
+For every tool, ask: What data? What representation? What mistakes? What risk?
+
+===== PAGE 19 =====
+
+Recent Advanced NLP
+What has changed after the transformer and LLM era
+Transformers
+Attention-based models became the foundation for BERT, GPT, T5, and
+modern LLMs.
+Instruction LLMs
+Models follow natural-language instructions for writing, coding, tutoring, and
+analysis.
+RAG
+Retrieval connects a model to documents before answering, useful
+for college, company, legal, and medical data.
+Tool-using agents
+Models can search, call APIs, run code, and complete multi-step tasks.
+Multimodal AI
+Text is combined with image, speech, video, PDFs, tables, and code.
+Long-context models
+Systems can read large documents, reports, repositories, or meeting
+transcripts at once.
+Natural Language Processing | First Class
+
+===== PAGE 20 =====
+
+More Advanced Topics to Watch
+These are becoming important in industry and research
+Small language models: cheaper, faster, easier to deploy on private or edge systems.
+Domain-specific LLMs: models tuned for law, medicine, finance, education, and coding.
+Evaluation beyond accuracy: hallucination, faithfulness, bias, toxicity, latency, and cost.
+Responsible AI: privacy, copyright, prompt injection, misuse, and explainability.
+Indic NLP: multilingual and low-resource language support for Indian languages.
+Synthetic data: generated data is used to train and evaluate NLP systems, but quality control matters.
+Natural Language Processing | First Class
+
+===== PAGE 21 =====
+
+Reference Books
+
+===== PAGE 22 =====
+
+Rank
+Research Lab
+University
+Stanford NLP Group
+Stanford University
+MIT Natural Language Processing Group
+Massachusetts Institute of Technology
+Berkeley AI Research (BAIR)
+University of California, Berkeley
+Allen Institute for AI (AI2)
+Independent Research Institute
+EdinburghNLP
+The University of Edinburgh
+UKP Lab
+Technical University of Darmstadt
+Princeton NLP
+Princeton University
+University of Washington NLP Group
+University of Washington
+EPFL NLP Lab
+EPFL
+Computational Linguistics and Information Processing (CLIP)
+Lab
+University of Maryland, College Park
+
+===== PAGE 23 =====
+
+
+
+===== PAGE 24 =====
+
+Rank
+Job Role
+LLM Engineer
+Generative AI Engineer
+NLP Engineer
+AI Agent Developer (Agentic AI)
+RAG Engineer
+AI Research Engineer (NLP/LLMs)
+Conversational AI Engineer
+AI Solution Architect (GenAI)
+AI Product Manager (GenAI)
+Responsible AI / AI Safety Engineer
+Top 10 NLP jobs in India (2026)
+
+===== PAGE 25 =====
+
+NLP Tasks
+
+===== PAGE 26 =====
+
+
+
+===== PAGE 27 =====
+
+Machine Learning, Deep Learning, and NLP
+
+===== PAGE 28 =====
+
+Applications of NLP
+
+===== PAGE 29 =====
+
+Modern NLP System Example
+College chatbot over official course documents
+Natural Language Processing | First Class
+Student question
+"When is CA1 and what unit is
+included?"
+What happens inside
+Retrieve relevant course file pages
+Check dates and unit mapping
+Generate answer with source context
+Warn if source information is missing
+Show source for verification
+This is NLP + search + reasoning + evaluation, not just a chatbot.
+
+===== PAGE 30 =====
+
+Mini Activity
+Human NLP pipeline in five minutes
+Sentence: "The food was late, but the support team solved it quickly."
+1.
+Find important words
+2.
+Detect sentiment words
+3.
+Notice contrast after 'but'
+4.
+Decide final sentiment
+5.
+Explain your reasoning
+Takeaway: NLP is hard because meaning is not just a bag of words.
+Natural Language Processing | First Class
+
+===== PAGE 31 =====
+
+Brainstorming Activity 1
+Warm-up MCQs: spot the NLP around you
+1. Which feature is the clearest example of NLP?
+A. Increasing phone brightness
+B. Translating Hindi text to English
+C. Compressing an image
+D. Sorting files by date
+Answer: B
+Natural Language Processing | First Class
+
+===== PAGE 32 =====
+
+Brainstorming Activity 1
+Warm-up MCQs: language understanding vs pattern matching
+2. A chatbot answers from a company's policy PDF. What modern NLP pattern is most likely being
+used?
+A. RAG: retrieve relevant passages, then generate an answer
+B. Only image compression
+C. Manual copy-paste by a human
+D. Random sentence generation
+Answer: A
+Natural Language Processing | First Class
+
+===== PAGE 33 =====
+
+Brainstorming Activity 1
+Warm-up MCQs: where embeddings help
+3. Why can a search engine understand that 'car' and 'automobile' are related?
+A. It stores words only alphabetically
+B. It learns vector representations of meaning
+C. It ignores synonyms
+D. It reads only the first letter
+Answer: B
+Natural Language Processing | First Class
+
+===== PAGE 34 =====
+
+Mini Activity 2
+Human NLP pipeline in five minutes
+Natural Language Processing | First Class
+Task: classify the sentence below as Positive, Negative, or Neutral.
+"The movie started slowly, but the ending was brilliant."
+Tokenize the sentence.
+Remove noise if needed.
+Find important words.
+Handle contrast after the word 'but'.
+Decide the final sentiment.
+why is this harder than just counting positive and negative words?

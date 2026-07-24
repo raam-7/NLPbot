@@ -1,0 +1,1824 @@
+
+
+===== PAGE 1 =====
+
+TE E7 1 0 1 · ARTI F I CI AL I NTEL L I GENCE & M ACHI NE L EARNI NG
+Natural Language
+Processing
+UNIT 1 — Introduction to Language
+Evolution · NLP Basics · Preprocessing · Tokenization · Stemming · POS Tagging · NER
+Symbiosis Institute of Technology, Pune · AIML Dept.
+
+===== PAGE 2 =====
+
+Syllabus
+
+===== PAGE 3 =====
+
+Course Map
+From basic language processing to modern language AI systems
+Unit I
+Language basics and NLP
+pipeline
+clean text, tokenize, POS, NER
+Unit II
+Feature extraction
+BoW, TF-IDF, N-grams, Naive Bayes
+Unit III Word embeddings
+Word2Vec, GloVe, semantic similarity
+Unit IV RNNs and sequence models
+language models, LSTM, GRU
+Unit V
+Machine translation and
+modern NLP
+Seq2Seq, BERT, GPT, conversational AI
+Natural Language Processing | First Class
+
+===== PAGE 4 =====
+
+Course Outcomes
+What you should be able to do by the end
+Explain evolution, need, applications, and phases of NLP.
+Apply feature extraction methods such as BoW, TF-IDF, N-grams, and probabilistic
+models.
+Use and compare word embeddings and neural representations.
+Analyze RNN/LSTM/GRU and advanced NLP models for language tasks.
+Understand machine translation and discuss current NLP research systems.
+Natural Language Processing | First Class
+
+===== PAGE 5 =====
+
+Evaluation Plan
+Assessment is linked with course outcomes
+Natural Language Processing | First Class
+CA1 Quiz
+Unit 1: Introduction to Language
+10 marks scaled to 4
+Tentative: 03/08/2026
+CA2 Unit Test
+CO2 and CO3
+Unit 2: Feature Extraction
+Unit 3: Word Embeddings
+20 marks scaled to 15
+Tentative: 07/09/2026 to
+12/09/2026
+CA3 Case Studies
+CO4 and CO5
+Advanced NLP models
+Machine translation
+12 marks
+Tentative: 22/10/2026
+Tip: build a small NLP example portfolio while learning. It makes CA3 easier.
+
+===== PAGE 6 =====
+
+Evaluation Scheme
+Mode of Communication
+⮚
+Moodle
+Sr. No.
+Component
+CO
+Marks
+Weightage
+Tentative Date
+CA1
+Case Study Based
+Think Pair Share
+(4.6/30)
+1st week of August 2025
+CA2
+Midterm Test
+(CO2:10, CO3:10)
+(13.3/30)
+8th to 13th Sept 2025
+CA3
+Research
+Assignment
+(12/30)
+27th October 2025
+
+===== PAGE 7 =====
+
+Reference Books
+
+===== PAGE 8 =====
+
+Online NLP Tutorials
+
+===== PAGE 9 =====
+
+Best NLP Certificate Courses
+1. Natural Language Processing Specialization- Coursera
+2. Become a Natural Language Processing Expert- Udacity
+3. Natural Language Processing- Coursera
+4. Natural Language Processing in TensorFlow- Coursera
+5. Introduction to Natural Language Processing in Python– DataCamp
+6. Natural Language Processing with Deep Learning in Python -Udemy
+7. Learn Natural Language Processing- Codecademy
+8. Data Science: Natural Language Processing (NLP) in Python -Udemy
+9. NLP -Natural Language Processing with Python- Udemy
+10. Natural Language Processing with Python Certification Course- Edureka
+
+===== PAGE 10 =====
+
+Rank
+Platform
+Free Tier
+Best For
+Hugging Face Spaces
+Yes
+NLP, LLM demos, Gradio, Streamlit
+Render
+Yes
+FastAPI, Flask, Django APIs
+Railway
+Small monthly
+free credit
+AI backends, APIs, databases
+Vercel
+Hobby Plan
+Next.js, React AI apps
+Streamlit Community Cloud
+Yes
+Interactive ML dashboards
+Google Colab + ngrok/Cloudflare Tunnel
+Yes
+Temporary AI demos
+PythonAnywhere
+Yes
+Flask APIs and Python apps
+Netlify
+Yes
+Static AI frontends
+Cloudflare Workers
+Yes
+AI APIs, edge inference
+Replicate
+Free trial credits
+Running open-source AI models
+
+===== PAGE 11 =====
+
+Top NLP Research Labs
+
+===== PAGE 12 =====
+
+
+
+===== PAGE 13 =====
+
+
+
+===== PAGE 14 =====
+
+
+
+===== PAGE 15 =====
+
+Apple NLP Engineer Resume
+
+===== PAGE 16 =====
+
+
+
+===== PAGE 17 =====
+
+Unit 1 — What We'll Cover
+7 hrs
+Evolution of Natural Language
+From human language origins to modern linguistics
+Introduction to NLP
+What NLP is, challenges, and key tasks
+Applications & Phases of NLP
+Opinion mining, dialog, discourse + pipeline
+Data Preprocessing Techniques
+Cleaning, normalization, stop-word removal
+Tokenization & Embedding
+Word/sentence tokens; dense vector representations
+Stemming & POS Tagging
+Root extraction + grammatical role labeling
+Named Entity Recognition (NER)
+Identifying persons, places, organizations
+
+===== PAGE 18 =====
+
+U N I T 1
+Evolution of Natural
+Language
+From grunts to grammar — how human language developed
+
+===== PAGE 19 =====
+
+How Language Evolved
+~2M BCE
+Gestures &
+Proto-speech
+~100K BCE
+Homo Sapiens
+Vocal Tract
+~50K BCE
+Structured
+Language
+~5K BCE
+Writing
+Systems
+1786 CE
+Comparative
+Linguistics
+1950s
+Computational
+Linguistics
+Key Insight: Language is uniquely human — recursive, symbolic, capable of expressing infinite ideas from finite elements (Chomsky,
+1957).
+
+===== PAGE 20 =====
+
+U N I T 1
+Introduction to NLP
+Teaching computers to read, write, and understand human
+language
+
+===== PAGE 21 =====
+
+What is Natural Language Processing?
+NLP is the branch of AI that gives computers the ability to understand, generate, and manipulate human
+(natural) language in both text and speech form.
+Syntax
+Structure of sentences
+Grammar rules, parse trees
+Semantics
+Meaning of words and
+sentences in context
+Pragmatics
+Intent & context beyond
+literal meaning
+Core Challenges of NLP
+▸Ambiguity: 'I saw the man with the telescope' — who had it?
+▸Context: Same word, different meanings (bank = riverbank or financial)
+▸Sarcasm & Irony: 'Oh great, another Monday!'
+▸Low-resource languages: billions of speakers, minimal digital data
+
+===== PAGE 22 =====
+
+Why Do We Need NLP? + Quick spaCy Demo
+of all enterprise data is
+unstructured text
+Chatbots & Dialog
+ChatGPT, Alexa, customer support bots
+Sentiment Analysis
+Product reviews, Twitter, brand monitoring
+Machine Translation
+Google Translate, DeepL — 7000+ languages
+Healthcare & Legal
+Clinical notes, legal contract review
+python — spaCy NLP pipeline demo
+import spacy
+# Load English model
+nlp = spacy.load('en_core_web_sm')
+text = "Apple was founded by Steve Jobs."
+doc = nlp(text)
+# Tokenization
+for token in doc:
+print(token.text, token.pos_)
+# Apple PROPN | was AUX | founded VERB
+# Named Entity Recognition
+for ent in doc.ents:
+print(ent.text, ent.label_)
+# Apple ORG | Steve Jobs PERSON
+
+===== PAGE 23 =====
+
+NLP Tasks
+
+===== PAGE 24 =====
+
+
+
+===== PAGE 25 =====
+
+
+
+===== PAGE 26 =====
+
+Machine Learning, Deep Learning, and NLP
+
+===== PAGE 27 =====
+
+Types of NLP
+
+===== PAGE 28 =====
+
+
+
+===== PAGE 29 =====
+
+
+
+===== PAGE 30 =====
+
+
+
+===== PAGE 31 =====
+
+What is a language?
+Language
+is
+a
+structured
+system
+of
+communication
+that
+involves
+complex
+combinations of its constituent components,
+such as characters, words, sentences, etc.
+Linguistics is the systematic study
+of language. In order to study NLP, it is
+important to understand some
+concepts
+from
+linguistics
+about
+how
+language is structured
+
+===== PAGE 32 =====
+
+
+
+===== PAGE 33 =====
+
+
+
+===== PAGE 34 =====
+
+Core NLP Language Levels
+Easy Mnemonic
+P -> M -> M -> S -> S -> P -> D -> W
+Phonology = Sounds
+Morphology = Word Formation
+Morpheme = Meaningful Parts
+Syntax = Sentence Structure
+Semantics = Sentence Meaning
+Pragmatics = Practical Meaning /
+Context
+Discourse = Sentence Connection
+World Knowledge = Real-World
+Understanding
+Phonology
+Speech sounds
+Ex 1: Bat vs Cat
+Ex 2: Ship vs Sheep
+One sound change can change meaning.
+Morphology
+Word formation
+Ex 1: un + happy + ness
+Ex 2: play + ed
+Words are built from smaller units.
+Morpheme
+Meaningful parts
+Ex 1: cat + s
+Ex 2: re + write
+Each part contributes meaning.
+Syntax
+Sentence structure
+Ex 1: The boy eats an apple.
+Ex 2: She is reading a book.
+Words follow grammar rules.
+Semantics
+Sentence meaning
+Ex 1: The bank is closed.
+Ex 2: I saw a bat.
+Meaning depends on word sense.
+Pragmatics
+Practical/context meaning
+Ex 1: Can you open the window?
+Ex 2: It is cold here.
+Context reveals intended meaning.
+Discourse
+Sentence connection
+Ex 1: Riya bought a laptop. It is fast.
+Ex 2: John dropped the glass. It broke.
+Later sentences depend on earlier ones.
+World Knowledge
+Real-world understanding
+Ex 1: The glass fell and broke.
+Ex 2: Birds usually fly.
+Understanding uses common knowledge.
+Memory Trick: start from sounds, build words, arrange sentences, understand
+meaning, use context, connect ideas, and apply real-world knowledge.
+Sounds
+>
+Words
+>
+Parts
+>
+Grammar
+>
+Meaning
+>
+Context
+>
+Connection
+>
+World
+
+===== PAGE 35 =====
+
+U N I T 1
+Applications & Phases of
+NLP
+Where NLP is used and how a system processes text step by step
+
+===== PAGE 36 =====
+
+Applications of NLP
+Chatbots & Dialog
+ChatGPT, Alexa, Google Assistant
+Speech Recognition
+Siri, Cortana, YouTube CC
+Machine Translation
+Google Translate, DeepL
+Opinion Mining
+Product reviews, Twitter analysis
+Text Summarization
+News snippets, research abstracts
+Information Retrieval
+Search engines, Q&A systems
+
+===== PAGE 37 =====
+
+Applications of NLP
+
+===== PAGE 38 =====
+
+Applications of NLP
+
+===== PAGE 39 =====
+
+Phases of the NLP Pipeline
+Lexical
+Analysis
+Tokenization,
+identify words
+Syntactic
+Analysis
+Parsing,
+grammar check
+Semantic
+Analysis
+Word meaning,
+WSD
+Discourse
+Integration
+Cross-sentence
+context
+Pragmatic
+Analysis
+Intent, real-world
+knowledge
+Input: Raw Text
+Output: Structured Knowledge / Action
+Example → "Apple acquired the startup." Lexical: tokens | Syntactic: NP VP NP | Semantic: acquisition event | Pragmatic: business context
+WSD: Word Sense Disambiguation
+
+===== PAGE 40 =====
+
+Phases in NLP
+
+===== PAGE 41 =====
+
+
+
+===== PAGE 42 =====
+
+Phases in NLP:Pipeline
+
+===== PAGE 43 =====
+
+Phases in NLP:Example
+
+===== PAGE 44 =====
+
+
+
+===== PAGE 45 =====
+
+Challenges in NLP
+• Contextual words and phrases
+
+===== PAGE 46 =====
+
+Ambiguity
+Ambiguity in NLP refers to
+sentences and phrases that
+potentially have two or more
+possible interpretations.
+
+===== PAGE 47 =====
+
+
+
+===== PAGE 48 =====
+
+Types of Ambiguity
+Lexical ambiguity
+A word that could be used as a verb, noun, or adjective.
+Semantic ambiguity
+The interpretation of a sentence in context. E.g. “I saw the boy on the beach
+with my binoculars” — I saw the boy through my binoculars, or the boy had
+my binoculars with him.
+Syntactic ambiguity
+Structure creates the confusion of meaning — “with my binoculars” could
+modify the verb “saw” or the noun “boy”.
+Even for humans this sentence is difficult to interpret without surrounding context. POS (part-of-speech) tagging is one NLP solution
+that can help solve the problem, somewhat.
+
+===== PAGE 49 =====
+
+Non Standardization in Languages
+
+===== PAGE 50 =====
+
+
+
+===== PAGE 51 =====
+
+NLP implementation Pipeline
+
+===== PAGE 52 =====
+
+Text Preprocessing & Feature Engineering
+Text Preprocessing
+Text Cleaning — HTML tag removal, emoji handling,
+spelling checker, etc.
+Basic Preprocessing — tokenization, stop-word removal,
+removing digits, lowercasing, removing punctuation,
+hashtags and special characters.
+Digression — POS, NER.
+Normalization — stemming and lemmatization.
+Vectorization — one-hot encoding, BoW, GloVe, TF-IDF.
+Feature Engineering
+◆
+One-Hot Encoder
+◆
+Bag of Words (BoW)
+◆
+n-grams
+◆
+TF-IDF
+◆
+Word2Vec
+◆
+GloVe
+
+===== PAGE 53 =====
+
+Model Building
+Heuristics Based
+◆
+Lexicon based
+◆
+Regex based
+ML Based
+◆
+Naïve Bayes
+◆
+SVM
+◆
+Decision Trees
+DL Based
+◆
+CNN
+◆
+RNN
+◆
+Transformers
+◆
+Autoencoders
+
+===== PAGE 54 =====
+
+
+
+===== PAGE 55 =====
+
+U N I T 1
+Data Preprocessing
+Techniques
+Cleaning and normalizing raw text before modeling
+
+===== PAGE 56 =====
+
+Text Preprocessing — Steps & Python Code
+1. Lowercasing
+"NLP" → "nlp"
+2. Remove Punctuation
+"Hello, world!" → "Hello world"
+3. Remove Stop Words
+"the cat sat on mat" → "cat sat mat"
+4. Remove HTML/Noise
+"<p>Buy now!</p>" → "Buy now"
+5. Normalize Numbers
+"I have 3 cats" → "I have NUM cats"
+python — NLTK preprocessing pipeline
+import re, nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+def preprocess(text):
+text = text.lower()
+text = re.sub(r'[^\w\s]', '', text)
+text = re.sub(r'\d+', 'NUM', text)
+stop = set(stopwords.words('english'))
+tokens = word_tokenize(text)
+return [w for w in tokens
+if w not in stop]
+# Test
+preprocess("The Cat SAT on 3 Mats!!")
+# ['cat', 'sat', 'NUM', 'mat']
+
+===== PAGE 57 =====
+
+Punctuation Removal
+• In this step, all the punctuations from the text are removed. string
+library of Python contains some pre-defined list of punctuations such
+as ‘!”#$%&'()*+,-./:;?@[\]^_`{|}~’
+
+===== PAGE 58 =====
+
+Lowering the Text
+• It is one of the most common text preprocessing Python steps where the text is converted into the same case preferably
+lower case. But it is not necessary to do this step every time you are working on an NLP problem as for some problems
+lower casing can lead to loss of information.
+• For example, if in any project we are dealing with the emotions of a person, then the words written in upper cases can be
+a sign of frustration or excitement.
+
+===== PAGE 59 =====
+
+Stop Word Removal
+• Stopwords are the commonly used words
+and are removed from the text as they do
+not add any value to the analysis. These
+words carry less or no meaning.
+• NLTK library consists of a list of words that
+are considered stopwords for the English
+language. Some of them are : [i, me, my,
+myself, we, our, ours, ourselves, you, you’re,
+you’ve, you’ll, you’d, your, yours, yourself,
+yourselves, he, most, other, some, such, no,
+nor, not, only, own, same, so, then, too,
+very, s, t, can, will, just, don, don’t, should,
+should’ve, now, d, ll, m, o, re, ve, y, ain,
+aren’t, could, couldn’t, didn’t, didn’t]
+
+===== PAGE 60 =====
+
+Decontracting the words
+• In English contractions, we often drop the vowels from a word to
+form the contractions. Removing contractions contributes to text
+standardization and is useful when we are working on Twitter
+data, on reviews of a product as the words play an important role
+in sentiment analysis.
+
+===== PAGE 61 =====
+
+Text Normalization — RegEx & Contractions
+Normalization Goals
+Expand Contractions
+don't → do not, I'm → I am
+Standardize Spellings
+colour → color, normalise → normalize
+Handle URLs/Emails
+https://sit.edu → URL_TOKEN
+Remove Accents
+café → cafe, naïve → naive
+Whitespace Cleanup
+'hello world' → 'hello world'
+python — normalization with regex & contractions
+import re
+import unicodedata
+CONTRACTIONS = {
+"don't": "do not",
+"i'm" :
+"i am",
+"won't": "will not"}
+def normalize(text):
+text = text.lower()
+for k,v in CONTRACTIONS.items():
+text = text.replace(k, v)
+text = re.sub(r'https?://\S+','URL', text)
+return text
+normalize("I don't visit https://sit.edu")
+# → "i do not visit URL"
+
+===== PAGE 62 =====
+
+
+
+===== PAGE 63 =====
+
+U N I T 1
+Tokenization & Embedding
+Breaking text into units and representing them as numbers
+
+===== PAGE 64 =====
+
+Tokenization
+• Tokenization is essentially splitting a phrase, sentence, paragraph, or
+an entire text document into smaller units, such as individual words
+or terms. Each of these smaller units are called tokens.
+
+===== PAGE 65 =====
+
+Tokenization — Types & Python Code
+Input: "NLP makes machines understand human
+language."
+Word Tokenization:
+NLP
+makes
+machines
+understand
+human
+language
+.
+Types of Tokenization:
+Type
+Example
+Used In
+Word
+["NLP","makes",...]
+Classic NLP tasks
+Sentence
+["Hi.","How are you?"]
+Summarization
+Subword
+"playing"→["play","##ing"]
+BERT, GPT, T5
+Character
+"NLP"→["N","L","P"]
+OCR, morphology
+python — NLTK tokenizers
+from nltk.tokenize import
+word_tokenize, sent_tokenize,
+RegexpTokenizer
+text = "I love NLP. It's amazing!"
+# Word tokens
+word_tokenize(text)
+# ['I','love','NLP','.','It',"'s",'amazing','!']
+# Sentence tokens
+sent_tokenize(text)
+# ['I love NLP.', "It's amazing!"]
+# Custom pattern (only words)
+tok = RegexpTokenizer(r'\w+')
+tok.tokenize(text)
+# ['I','love','NLP','It','s','amazing']
+
+===== PAGE 66 =====
+
+Methods to Perform Tokenization in Python
+• Tokenization using Python’s split() function
+• Tokenization using Regular Expressions (RegEx)
+• Tokenization using NLTK, spaCy library, Keras, Gensim
+
+===== PAGE 67 =====
+
+Tokenization using Split()
+• split() method as it is the most basic one. It returns a list of strings after breaking the
+given string by the specified separator. By default, split() breaks a string at each space.
+We can change the separator to anything.
+
+===== PAGE 68 =====
+
+
+
+===== PAGE 69 =====
+
+Tokenization using Regex
+Regular expression is a sequence of character(s) mainly used to find
+and replace patterns in a string or file
+The most common uses of
+regular expressions are:
+• Search a string (search
+and match)
+• Finding a string (findall)
+• Break string into a sub
+strings (split)
+• Replace part of a string
+(sub)
+Commonly used methods regex
+methods are under “re” library:
+1.re.match()
+2.re.search()
+3.re.findall()
+4.re.split()
+5.re.sub()
+6.re.compile()
+
+===== PAGE 70 =====
+
+
+
+===== PAGE 71 =====
+
+RegEx Functions
+
+===== PAGE 72 =====
+
+Metacharacters
+
+===== PAGE 73 =====
+
+Special Sequences
+
+===== PAGE 74 =====
+
+Sets
+
+===== PAGE 75 =====
+
+
+
+===== PAGE 76 =====
+
+Vectorization
+• Word Embeddings or Word vectorization is a methodology in NLP to map
+words or phrases from vocabulary to a corresponding vector of real
+numbers which used to find word predictions, word similarities/semantics.
+
+===== PAGE 77 =====
+
+Word Embeddings — Words as Vectors + Code
+Famous Analogy: king − man + woman ≈
+queen
+(Word2Vec, Mikolov et al. 2013)
+One-Hot
+Sparse, no similarity
+[0,0,1,0,0,...,0]
+Word2Vec
+Dense 300-d, semantic
+[0.12,-0.45,0.89...]
+BERT
+Contextual: same word
+different vectors
+python — Gensim Word2Vec embeddings
+from gensim.models import Word2Vec
+sentences = [
+["king","rules","the","land"],
+["queen","rules","the","kingdom"]
+]
+model = Word2Vec(sentences,
+vector_size=100,
+window=5, min_count=1)
+# Get vector for 'king'
+model.wv['king']
+# shape: (100,)
+# Most similar words
+model.wv.most_similar('king', topn=3)
+# [('queen',0.97),('land',0.82)...]
+
+===== PAGE 78 =====
+
+Word Embeddings
+Words as Vectors
+How computers move from text labels to meaning-rich
+numerical representations.
+King
+Queen
+Apple
+Computer
+Dog
+Cat
+semantic map
+
+===== PAGE 79 =====
+
+What Is Word Embedding?
+A word embedding is a numerical vector that represents a word's meaning.
+Earlier, computers treated words simply as
+text.
+Examples: King, Queen, Apple, Computer.
+A computer does not understand their
+meanings directly.
+So we convert each word into numbers
+called vectors.
+These
+numerical
+representations
+are
+called word embeddings.
+Think of each word as
+coordinates in a high-
+dimensional space.
+Words with similar meanings are
+located close together.
+cat
+dog
+car
+
+===== PAGE 80 =====
+
+From Words to Coordinates
+Embeddings let the computer compare meaning using vector distance.
+Word
+Vector Example
+King
+[0.25, 0.48, ...]
+Man
+[0.10, 0.32, ...]
+Woman
+[0.18, 0.44, ...]
+A vector is just a list of numbers.
+Each number captures part of how the
+word behaves in language.
+The full vector becomes a position in
+meaning space.
+Nearby positions usually mean related
+words.
+Key Idea
+The computer does not store dictionary definitions.
+It learns useful patterns from word usage.
+
+===== PAGE 81 =====
+
+Famous Word2Vec Analogy
+King - Man + Woman is very close to Queen.
+King
+-
+Man
++
+Woman
+approximately
+Queen
+This demonstrates that Word2Vec learned relationships between words.
+It did not merely memorize word labels.
+The vector direction from Man to Woman is similar to the direction from King to Queen.
+
+===== PAGE 82 =====
+
+One-Hot Encoding
+A simple representation where each word gets its own position.
+Word
+Vector
+Cat
+[1 0 0 0]
+Dog
+[0 1 0 0]
+Car
+[0 0 1 0]
+Apple
+[0 0 0 1]
+Example vocabulary
+Cat
+Dog
+Car
+Apple
+Identity is captured, but meaning is
+not.
+
+===== PAGE 83 =====
+
+Problem With One-Hot Encoding
+Every word is equally different.
+Distance(Cat, Dog) =
+Distance(Cat, Apple)
+The computer cannot understand that Cat and Dog are both animals.
+Cat and Apple look just as different as Cat and Dog.
+Therefore, one-hot encoding captures identity only, not meaning.
+
+===== PAGE 84 =====
+
+Word2Vec
+Instead of huge sparse vectors, each word gets a dense vector.
+King
+[ 0.23
+-0.61
+0.89
+0.42
+... ]
+Dense vectors are compact and meaning-rich.
+Nearby word groups
+King, Queen, Prince, Princess are very
+close.
+Doctor, Nurse, Hospital, Medicine are
+nearby.
+The model learns this by observing
+surrounding words.
+
+===== PAGE 85 =====
+
+How Word2Vec Learns
+It observes surrounding words again and again.
+Context window
+medicine
+at
+hospital
+Words that often appear in similar contexts receive similar vectors.
+If dog often appears near barks, puppy, plays, and pet, those words become related in vector
+space.
+If hospital often appears near doctor, nurse, patient, and medicine, those vectors move closer.
+The
+doctor
+gave
+
+===== PAGE 86 =====
+
+BERT Embeddings
+Modern embeddings are context aware.
+Sentence 1
+He deposited money in the bank.
+bank = financial institution
+Sentence 2
+The fisherman sat on the river
+bank.
+bank = side of a river
+Word2Vec gives one vector for bank. BERT gives different vectors based on context.
+
+===== PAGE 87 =====
+
+One-Hot vs Word2Vec vs BERT
+The main evolution is from identity to meaning to context.
+Method
+Meaning Captured
+Context Aware
+One-Hot
+No
+No
+Word2Vec
+Yes
+No
+BERT
+Yes
+Yes
+BERT understands language much better because word meaning can change from
+sentence to sentence.
+
+===== PAGE 88 =====
+
+More Famous Word2Vec Examples
+Students remember embeddings when relationships become visible.
+Paris - France + Italy
+approximately
+Rome
+Tokyo - Japan + India
+approximately
+Delhi
+Walking - Walk + Swim
+approximately
+Swimming
+Brother - Man + Woman
+approximately
+Sister
+These examples demonstrate that embeddings encode semantic relationships.
+
+===== PAGE 89 =====
+
+Code Example 1: Find Similar Words
+Train a small Word2Vec model and ask for words similar to dog.
+from gensim.models import Word2Vec
+sentences = [
+["dog","barks","loudly"],
+["cat","meows"],
+["puppy","plays"],
+["dog","plays"],
+["cat","sleeps"],
+["puppy","barks"]
+]
+model = Word2Vec(
+sentences,
+vector_size=50,
+window=2,
+min_count=1
+)
+print(model.wv.most_similar("dog"))
+Output may look like
+[
+('puppy', 0.91),
+('barks', 0.74),
+('plays', 0.61)
+]
+The model sees dog, puppy, barks,
+and plays in related contexts.
+
+===== PAGE 90 =====
+
+Code Example 2: Word Analogy
+Use vector arithmetic to solve an analogy.
+from gensim.models import KeyedVectors
+# Example with trained or pretrained vectors
+result = model.wv.most_similar(
+positive=['queen', 'man'],
+negative=['woman'],
+topn=5
+)
+print(result)
+# Common pretrained-vector analogy
+result = model.wv.most_similar(
+positive=['king', 'woman'],
+negative=['man']
+)
+print(result)
+Expected output
+queen
+The exact result depends on the
+training data and vector quality.
+
+===== PAGE 91 =====
+
+Code Example 3: Cosine Similarity
+Semantically similar words have higher cosine similarity.
+print(model.wv.similarity("dog", "puppy"))
+print(model.wv.similarity("dog", "car"))
+Example output
+Dog-Puppy : 0.89
+Dog-Car : 0.14
+Cosine similarity compares the angle between vectors. Similar meanings
+point in similar directions.
+
+===== PAGE 92 =====
+
+Classroom Explanation: 2 Minutes
+A ready-to-speak explanation for students.
+"Imagine every word as a point on a map. In One-Hot Encoding, every word is isolated, so
+the computer knows only that they are different. Word2Vec changes this by placing
+similar words close together - 'king' near 'queen', 'doctor' near 'hospital', and 'cat' near
+'dog'. BERT goes a step further: it understands that the same word can have different
+meanings depending on the sentence. For example, 'bank' in 'river bank' and 'bank' in
+'bank account' are represented differently. This evolution - from One-Hot to Word2Vec to
+BERT - is one of the biggest milestones in modern NLP."
+This connects the concept with intuitive examples and practical code students can relate to.
+
+===== PAGE 93 =====
+
+Key Takeaways
+The full story in one slide.
+One-Hot
+Huge sparse vector
+Captures identity
+Does not capture
+meaning
+Word2Vec
+Dense vector
+Captures meaning
+One vector per word
+BERT
+Dense contextual vector
+Captures meaning
+Understands context
+Word embeddings changed NLP by turning words into mathematical objects that can be
+compared, clustered, and reasoned with.
+
+===== PAGE 94 =====
+
+U N I T 1
+Stemming & POS Tagging
+Reducing words to roots and labeling grammatical roles
+
+===== PAGE 95 =====
+
+Stemming
+• It is also known as the text
+standardization step where
+the words are stemmed or
+diminished
+to
+their
+root/base
+form.
+For
+example,
+words
+like
+‘programmer’,
+‘programming,
+‘program’
+will
+be
+stemmed
+to
+‘program’.
+• But
+the
+disadvantage
+of
+stemming is that it stems
+the words such that its root
+form loses the meaning or it
+is
+not
+diminished
+to
+a
+proper English word.
+
+===== PAGE 96 =====
+
+Lemmatization
+• It
+stems
+the
+word
+but
+makes sure that it does not
+lose
+its
+meaning.
+Lemmatization
+has
+a
+pre-defined
+dictionary that stores the
+context
+of
+words
+and
+checks the word in the
+dictionary
+while
+diminishing.
+
+===== PAGE 97 =====
+
+Stemming vs Lemmatization — Side by Side
+Stemming (Porter / Snowball)
+Rule-based — fast but may produce non-words:
+running
+→ run
+studies
+→ studi
+flies
+→ fli
+better
+→ better
+Lemmatization (WordNet)
+Vocabulary-based — slower but always valid words:
+running
+→ run
+better
+→ good
+studies
+→ study
+corpora
+→ corpus
+python — Stemming & Lemmatization (NLTK)
+from nltk.stem import PorterStemmer
+from nltk.stem import WordNetLemmatizer
+stemmer = PorterStemmer()
+lemma = WordNetLemmatizer()
+words = ["running","studies","better","corpora"]
+for w in words:
+s = stemmer.stem(w)
+l = lemma.lemmatize(w, pos='v')
+print(f"{w:<10} stem:{s:<10} lem:{l}")
+# running stem:run lem:run
+# studies stem:studi lem:study
+# better stem:better lem:good
+# corpora stem:corpora lem:corpus
+
+===== PAGE 98 =====
+
+POS Tagging
+• Part-of-speech-tagging is a labeling/tagging mechanism where the
+words in the given corpus is tagged grammatically, it means the
+words are labeled as a noun, verb, adjective, adverb, etc. It even does
+fine-grained tagging like ‘noun-plural’. It even considers tense while
+tagging.
+• POS Tagging Application:
+• Text 2 Speech recognition
+• Word sense disambiguation
+
+===== PAGE 99 =====
+
+
+
+===== PAGE 100 =====
+
+
+
+===== PAGE 101 =====
+
+
+
+===== PAGE 102 =====
+
+
+
+===== PAGE 103 =====
+
+POS Tagging — Annotating Grammatical Roles
+Example sentence:
+The
+DT
+Determiner
+quick
+JJ
+Adjective
+fox
+NN
+Noun
+jumps
+VBZ
+Verb (3p)
+over
+IN
+Preposition
+the
+DT
+Determiner
+lazy
+JJ
+Adjective
+dog
+NN
+Noun
+Common Penn Treebank Tags:
+▸NN / NNS = Noun / Plural
+▸VB / VBZ = Verb base / 3rd person
+▸JJ = Adjective, RB = Adverb
+▸DT = Determiner, IN = Preposition
+▸PRP = Pronoun, CC = Conjunction
+
+===== PAGE 104 =====
+
+Syntactics Parsing
+
+===== PAGE 105 =====
+
+Syntactic analysis or parsing
+• The purpose of this phase is to draw exact meaning, or dictionary
+meaning from the text.
+• Syntax analysis checks the text for meaningfulness comparing to the
+rules of formal grammar.
+• For example, the sentence like “hot ice-cream” would be rejected by
+semantic analyzer.
+• In this sense, syntactic analysis or parsing may be defined as the
+process of analyzing the strings of symbols in natural language
+conforming to the rules of formal grammar.
+
+===== PAGE 106 =====
+
+Concept of Parser
+• It is defined as the software component designed for taking input data (text) and
+giving structural representation of the input after checking for correct syntax as
+per formal grammar.
+The main roles of the parse include −
+• To report any syntax error.
+• To recover from commonly occurring error
+so that the processing of the remainder of
+program can be continued.
+• To create parse tree.
+• To create symbol table.
+• To produce intermediate representations
+(IR).
+
+===== PAGE 107 =====
+
+Types of Parsing
+• Derivation divides parsing into the followings two types −
+Top-down Parsing
+• In this kind of parsing, the parser starts
+constructing the parse tree from the start
+symbol and then tries to transform the start
+symbol to the input.
+• The most common form of top-down parsing
+uses recursive procedure to process the
+input.
+• The main disadvantage of recursive descent
+parsing is backtracking.
+Bottom-up Parsing
+In this kind of parsing, the parser starts
+with the input symbol and tries to
+construct the parser tree up to the start
+symbol.
+
+===== PAGE 108 =====
+
+Types of Derivation
+• To decide which non-terminal to be replaced with production rule
+• Left-most Derivation
+• In the left-most derivation, the sentential form of an input is scanned
+and replaced from the left to the right. The sentential form in this
+case is called the left-sentential form.
+• Right-most Derivation
+• In the right-most derivation, the sentential form of an input is
+scanned and replaced from right to left. The sentential form in this
+case is called the right-sentential form.
+
+===== PAGE 109 =====
+
+Concept of Parse Tree
+• It is the graphical depiction of a derivation.
+• The start symbol of derivation serves as the root of the parse tree.
+• In every parse tree, the leaf nodes are terminals and interior nodes
+are non-terminals.
+• A property of parse tree is that in-order traversal will produce the
+original input string.
+
+===== PAGE 110 =====
+
+Concept of Grammar
+• Grammar is very essential and important to describe the syntactic
+structure of well-formed programs.
+• A mathematical model of grammar was given by Noam Chomsky in 1956,
+which is effective for writing computer languages.
+• Mathematically, a grammar G can be formally written as a 4-tuple (N, T, S,
+P) where
+• N or VN = set of non-terminal symbols, i.e., variables.
+• T or ∑= set of terminal symbols.
+• S = Start symbol where S ∈N
+• P denotes the Production rules for Terminals as well as Non-terminals. It has the
+form α → β, where α and β are strings on VN ∪∑ and least one symbol of α belongs
+to VN
+
+===== PAGE 111 =====
+
+Phrase Structure or Constituency Grammar
+• Example : “This tree is illustrating the constituency relation”
+
+===== PAGE 112 =====
+
+Constituency Grammar Or Phrase Structure
+
+===== PAGE 113 =====
+
+• To get the graphical representation we have to run one more line of code i.e. output.draw()
+Graphical Representation Of The Above Output Of Code
+
+===== PAGE 114 =====
+
+Semantic Parsing
+
+===== PAGE 115 =====
+
+U N I T 1
+Named Entity Recognition
+(NER)
+Finding and classifying real-world entities in text
+
+===== PAGE 116 =====
+
+
+
+===== PAGE 117 =====
+
+Chunking
+• Chunking involves grouping together individual pieces of information
+from a sentence, such as nouns, verbs, adjectives, and adverbs, into
+larger units known as chunks.
+• The most common type of chunking is noun phrase (NP) chunking, which
+involves identifying and extracting noun phrases from a sentence, such
+as "the cat," "a book," or "my friend." Another type of chunking is verb
+phrase (VP) chunking, which involves identifying and extracting verb
+phrases from a sentence, such as "ate breakfast," "is running," or "will
+sing.“
+• Steps:
+• Identify the parts of speech in a sentence using part-of-speech (POS)
+tagging.
+• The chunks are created by grouping together certain types of words
+based on their POS tags.
+• The most common types of chunks include
+• noun phrases
+• verb phrases,
+• prepositional phrases.
+
+===== PAGE 118 =====
+
+Chinking
+• Chinking, on the other hand, is the process of excluding certain words or
+phrases from a chunk. This is useful when we want to exclude specific
+types of words, such as prepositions, conjunctions, or determiners, from
+the chunks we extract.
+• Chinking is typically used in combination with chunking, and it involves
+identifying the words or phrases that we want to exclude from a chunk
+and marking them with the tag O (outside) in a named entity recognition
+(NER) system.
+POS Tagging vs Chunking vs NER
+
+===== PAGE 119 =====
+
+
+
+===== PAGE 120 =====
+
+NER
+• NER is the process of identifying and categorizing words,
+expressions, or names in unstructured data into predefined
+categories such as persons, organizations, and locations.
+• It is extremely helpful in:
+• Identifying the names in a given social media content
+• Read between news article to extract the named entities
+like brand name, company name, etc
+• Simplifies search and makes it efficient by giving us the set
+of entities to be searched in the pool of corpus
+• We can easily pick the relevant location info from the given
+set of corpus to streamline our actions accordingly
+• It is used extensively in chatbots to plan the responses to
+be given to the user.
+
+===== PAGE 121 =====
+
+NER — Concepts & Python Code
+NER locates and classifies named entities into categories: PERSON, ORG, LOCATION, DATE, MONEY, MISC.
+Example:
+Elon
+PERSON
+Musk
+PERSON
+founded
+Tesla
+ORG
+in
+DATE
+in
+California
+LOCATION
+PERSON
+Narendra Modi, Einstein
+ORG
+ISRO, Google, SIT
+LOCATION
+Pune, Amazon River, Mars
+DATE
+26 Jan, last Monday
+MONEY
+₹500 crore, $1B
+python — spaCy NER + displacy viz
+import spacy
+from spacy import displacy
+nlp = spacy.load('en_core_web_sm')
+doc = nlp("Elon Musk founded Tesla in 2003")
+for ent in doc.ents:
+print(ent.text, ent.start_char,
+ent.end_char, ent.label_)
+# Elon Musk 0 9 PERSON
+
+===== PAGE 122 =====
+
+NER Applications
+• NER Categorizes Documents
+• NER Enhances Customer Support
+• NER Assists Biomedical Researchers and Hospitals
+• NER Influences Recommendation Systems
+• Content Classification for Media Agencies with NER
+• Summarizes Resumes
+• NER Provides Support to Chatbots
+• NER to Optimize Search Engine Algorithms
+
+===== PAGE 123 =====
+
+Legal NLP
+• Extracting DOC (Document Type), PARTY (entity signing a contract), ALIAS (the way a
+company is named later on in the document) and EFFDATE (Effective Date of the
+contract).
+
+===== PAGE 124 =====
+
+Pharma NLP
+• Detecting clinical entities in text.
+
+===== PAGE 125 =====
+
+Finance NLP
+• Extracting financial entities from annual reports, as Expenses, Loses,
+Profit declines or increases, etc.
+
+===== PAGE 126 =====
+
+Healthcare NLP
+• Exploring oncological terms.
+
+===== PAGE 127 =====
+
+Fashion NLP
+• recognize fashion concepts such as brands, colors or seasons in text,
+or to classify whole text documents into one or more categories.
+
+===== PAGE 128 =====
+
+Search Engine & recommendation NER
+
+===== PAGE 129 =====
+
+Steps in NER
+Extracting the Information
+• The first step in NER is extracting the information by detecting and preparing the named entities mentioned in
+the document, paragraph, sentence and texts. The entire extraction phase includes the tagging the speech,
+detecting the boundaries of sentence, capitalization rules and co-reference in the documents that more
+important to use and find more specific terms in the search.
+Searching the Entities
+• The next process in NER is searching the entity candidates to mention in the document. Names, multiple
+pages, and informative web pages pseudonyms are also considered to catch the synonyms. The searcher
+maintains the balance with accuracy and recall the right entity while keeping a small set of entities in order to
+reduce the calculation needed for recognizing such entities.
+
+===== PAGE 130 =====
+
+NER based preprocessing workflow
+
+===== PAGE 131 =====
+
+Basic NER Entity Category
+
+===== PAGE 132 =====
+
+
+
+===== PAGE 133 =====
+
+
+
+===== PAGE 134 =====
+
+Evolution and types of NER Methodology
+Learning Based Methods with sequence labelling
+Feature Based Methods with sequence labelling
+
+===== PAGE 135 =====
+
+Different NER systems
+Dictionary-based systems
+• This is the simplest NER approach.
+Here we will be having a dictionary
+that
+contains
+a
+collection
+of
+vocabulary. In this approach, basic
+string matching algorithms are used to
+check whether the entity is occurring
+in the given text to the items in the
+vocabulary. The method has limitations
+as it is required to update and maintain
+the dictionary used for the system.
+
+===== PAGE 136 =====
+
+Rule-based systems
+• Here, the model uses a pre-defined
+set
+of
+rules
+for
+information
+extraction. Mainly two types of rules
+are used, Pattern-based rules, which
+depend
+upon
+the
+morphological
+pattern of the words used, and
+context-based rules, which depend
+upon the context of the word used in
+the given text document.
+• Eg:Create
+regular
+expressions
+to
+extract:
+– Telephone number
+– E-mail
+– Capitalized names
+Pattern Based
+Context based rules
+
+===== PAGE 137 =====
+
+When context-based rules are useful?
+
+===== PAGE 138 =====
+
+Sequence Labelling
+• Sequence
+labeling
+is a
+task that
+assigns
+categorial label to each element in an input
+sequence. Many problems can be formalized
+as sequence labeling task, including speech
+recognition,
+video
+analysis
+and
+various
+problems in NLP (e.g. POS tagging, NER,
+Chunking, etc.).
+• Traditionally sequence labeling requires large
+amount
+of
+hand-engineered
+features
+and
+domain-specific
+knowledge,
+but
+recently
+neural approaches have achieved state-of-the-
+art performance on several sequence labeling
+benchmarks.
+A
+common
+data
+format
+for
+sequence labeling task is IOB (Inside-Outside-
+Beginning),
+
+===== PAGE 139 =====
+
+The IOB format (short for inside, outside, beginning) is a
+tagging format that is used for tagging tokens in a
+chunking task such as named-entity recognition. These
+tags are similar to part-of-speech tags but give us
+information about the location of the word in the chunk.
+BNP: the beginning of a noun phrase
+I-NP: describes that the word is inside of the current noun
+phrase.
+O: end of the sentence.
+B-VP and I-VP: beginning and inside of a verb phrase.
+
+===== PAGE 140 =====
+
+Original Input Sentence
+POS
+Tags
+Chunks
+IOB NER
+
+===== PAGE 141 =====
+
+
+
+===== PAGE 142 =====
+
+
+
+===== PAGE 143 =====
+
+Complete NLP Preprocessing Pipeline — Python
+Unit 1 Recap
+1. Tokenize
+"I love NLP!" →
+['I','love','NLP','!']
+2. Lowercase
+→ ['i','love','nlp','!']
+3. Remove Punct.
+→ ['i','love','nlp']
+4. Remove Stops
+→ ['love','nlp']
+5. Lemmatize
+→ ['love','nlp']
+6. POS Tag
+→ [('love','VB'),('nlp','NN')]
+7. NER
+→ [] (no entities found)
+python — end-to-end NLP pipeline
+import nltk, spacy, re
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+def nlp_pipeline(text):
+# Step 1-4: clean & tokenize
+text = text.lower()
+text = re.sub(r'[^\w\s]','',text)
+stop = set(stopwords.words('english'))
+tokens = [w for w in text.split()
+if w not in stop]
+# Step 5: lemmatize
+lem = WordNetLemmatizer()
+tokens = [lem.lemmatize(w) for w in tokens]
+# Step 6-7: POS + NER via spaCy
+nlp = spacy.load('en_core_web_sm')
+doc = nlp(' '.join(tokens))
+return doc
+
+===== PAGE 144 =====
+
+Unit 1 — Key Takeaways
+Language & NLP
+NLP bridges human language and AI; challenges include
+ambiguity, context, and sarcasm.
+NLP Applications
+Opinion mining, dialog, MT, search, summarization — NLP
+powers them all.
+5 Phases of NLP
+Lexical → Syntactic → Semantic → Discourse → Pragmatic.
+Preprocessing
+Lowercase, remove punctuation/stops, normalize — foundations
+of every pipeline.
+Tokenization
+Word / sentence / subword / character. BPE used by
+Transformers.
+Stemming & POS
+Porter/Snowball stem; WordNet lemmatize. POS: NN, VBZ, JJ,
+DT, IN.
+NER
+spaCy/NLTK identify PERSON, ORG, DATE, LOCATION —
+basis of IE systems.
+
+===== PAGE 145 =====
+
+Questions & Discussion
+Next class: Unit 2 — Feature Extraction (BoW, TF-IDF, N-grams, Naïve Bayes)
+TEE7101 · AIML Dept. · SIT Pune
